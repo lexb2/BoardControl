@@ -1,0 +1,11 @@
+{
+    "name": "BoardControl",
+    "version": "0.1.0",
+    "dependencies": {
+        "config": "^1.30.0",
+        "ejs": "^2.1.4",
+        "express": "^4.11.2"
+    },
+    "author": "lexb2",
+    "description": "Control and monitor any GNU/Linux system from a Web UI using bash commands to do action or display information."
+}

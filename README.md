@@ -2,12 +2,13 @@
 
 ## Overview
 
-Control and monitor any GNU/Linux or MacOs system from a Web UI using bash commands to do action or display information. Mostly suited to work over local network on development board (Raspberry Pi / Orange Pi / BeagleBone..) or Linux based HTPC.
-The webUI can be used from a desktop or a phone.
+Control and monitor any GNU/Linux or MacOs system from a Web UI using customizable bash commands to do action or display information. This allow to have a quick look on what is going on the system and perform any action on it without having to start a ssh session (Headless board) or interrupt your favorite movie playing (HTPC).
 
-Desktop (with script result) |  Mobile (script result cleared)
+Mostly suited to work over local network on development board (Raspberry Pi / Orange Pi / BeagleBone..) or Linux based HTPC. The webUI can be used from a desktop or a phone.  
+
+Mobile (command result cleared) |  Desktop (command result display)
 :-------------------------:|:-------------------------:
-![alt tag](screenshot/UI_desktop.png "Desktop view of the UI")  |  ![alt tag](screenshot/UI_mobile.png "Desktop view of the UI")
+![alt tag](screenshot/UI_mobile.png "Desktop view of the UI")  |   ![alt tag](screenshot/UI_desktop.png "Desktop view of the UI") 
 
 ## Requirements
 

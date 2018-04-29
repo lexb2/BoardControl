@@ -141,24 +141,20 @@ exec | the bash command to execute, result will be shown on website
 }
 ```
 
+After updating the configuration, BoardControl need to be restarted
+
+```bash
+sudo service boardcontrol restart
+```
+
 #### Config example
 
 ```json
 {
     "config": {
         "listeningPort": 8081,
-        "pageTitle": "Board control",
+        "pageTitle": "BoardControl",
         "commands": [
-            {
-                "label": "Mount",
-                "nickname": "mont",
-                "exec": "mount -a"
-            },
-            {
-                "label": "Unmout",
-                "nickname": "umount",
-                "exec": "umount /media/*"
-            },
             {
                 "label": "Shutdown",
                 "nickname": "shutdown",
@@ -170,12 +166,33 @@ exec | the bash command to execute, result will be shown on website
                 "exec": "reboot"
             },
             {
-                "label": "Run my awesome script",
+                "label": "List files",
+                "nickname": "ls",
+                "exec": "ls /home"
+            },
+            {
+                "label": "Run script",
                 "nickname": "myscript",
                 "exec": "/path/to/my/./script.sh"
             }
         ],
         "informations": [
+            {
+                "label": "Disk free space",
+                "exec": "df -h | grep 'data\\|root\\|Size'"
+            },
+            {
+                "label": "Free ram",
+                "exec": "free -h"
+            },            
+            {
+                "label": "Top cpu process",
+                "exec": "ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -n 5"
+            },  
+            {
+                "label": "Uptime",
+                "exec": "uptime"
+            },
             {
                 "label": "Public IP address",
                 "exec": "curl -s http://checkip.dyndns.org/ | sed 's/[a-zA-Z<>/ :]//g'"
@@ -183,23 +200,8 @@ exec | the bash command to execute, result will be shown on website
             {
                 "label": "Local IP address",
                 "exec": "ifconfig | grep -E \"([0-9]{1,3}\\.){3}[0-9]{1,3}\" | grep -v 127.0.0.1 | awk '{ print $2 }' | cut -f2 -d: | head -n1"
-            },
-            {
-                "label": "Top cpu process",
-                "exec": "ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -n 5"
-            },
-            {
-                "label": "Free ram",
-                "exec": "free -h"
-            },
-            {
-                "label": "Uptime",
-                "exec": "uptime"
-            },
-            {
-                "label": "Disk free space",
-                "exec": "df -h | head -n2 "
             }
+
         ]
     }
 }

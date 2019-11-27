@@ -103,3 +103,17 @@ function updateResultIndicatorAndStatus(status) {
 
     }
 }
+
+function modifyLinkTarget(event)
+{
+        var target = event.target;
+         
+        if (target.tagName.toLowerCase() == 'a') {
+            var port = target.getAttribute('href').match(/^:(\d+)(.*)/);
+            if (port) {
+                target.href = port[2];
+                target.port = port[1];
+            }
+        }
+    
+};

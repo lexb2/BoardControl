@@ -17,6 +17,7 @@ app.use(express.static('assets/'));
 
 app.get('/', function (req, res) {
     res.render('index.ejs', {
+        links: config.links,
         commands: config.commands,
         pageTitle: config.pageTitle
     });

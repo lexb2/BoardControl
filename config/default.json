@@ -2,6 +2,23 @@
     "config": {
         "listeningPort": 8081,
         "pageTitle": "BoardControl",
+        "links": [
+            {
+                "label": "BoardControl on GitHub",
+                "url": "https://github.com/lexb2/BoardControl",
+                "newTab": true
+            },
+            {
+                "label": "Transmission",
+                "url": ":8080/transmission/web/",
+                "newTab": true
+            },
+            {
+                "label": "Google",
+                "url": "https://google.com",
+                "newTab": true
+            }
+        ],
         "commands": [
             {
                 "label": "Shutdown",

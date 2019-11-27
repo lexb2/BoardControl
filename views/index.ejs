@@ -46,16 +46,30 @@
     </div>
 
     <div class="uk-container uk-container-small	page-container">
+            <div class="uk-card uk-card-default uk-card-body">
+                    <div class="uk-section uk-section-default uk-section-small">
+                        <div class="uk-container">
+                            <div class="uk-margin">
+                                <div class="uk-flex uk-flex-center" uk-grid>
+                                    <% links.forEach(function(link, index) { %>
+                                        <a class="uk-button uk-button-default" href="<%= link.url %>" onclick="modifyLinkTarget(event);" <% if (link.newTab == true) { %>target="_blank" rel=”noopener”<% } %> >
+                                            <span uk-icon="icon: link"></span> <%= link.label %>
+                                        </a>        
+                                    <% }); %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
         <div class="uk-card uk-card-default uk-card-body">
             <div class="uk-section uk-section-default uk-section-small">
                 <div class="uk-container">
-                    <!--<h3>Commands</h3>-->
                     <div class="uk-margin">
                         <div class="uk-flex uk-flex-center" uk-grid>
-
                             <% commands.forEach(function(command, index) { %>
                                 <button class="uk-button uk-button-default" onclick="sendCommandAndPopulateResultZone('<%= command.nickname %>')">
-                                    <%= command.label %>
+                                        <span uk-icon="icon: chevron-right"></span> <%= command.label %>
                                 </button>
 
                                 <% }); %>
@@ -63,14 +77,12 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
         <div id="resultContainer" class="uk-card uk-card-default uk-card-body">
             <div class="uk-section uk-section-default uk-section-small">
                 <div class="uk-container">
                     <div>
-                        <!--<h3>Result</h3>-->
                         <span id="successIndicator" class="uk-label uk-label-success">Success</span>
                         <span id="failureIndicator" class="uk-label uk-label-warning">Error</span>
                         <span id="clearIcon">
@@ -86,7 +98,6 @@
         <div class="uk-card uk-card-default uk-card-body">
             <div class="uk-section uk-section-default uk-section-small">
                 <div class="uk-container">
-                    <!--<h3>Information</h3>-->
                     <div class="uk-margin">
                         <div id="informationZone">
                                 <div uk-spinner></div>

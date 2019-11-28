@@ -1,5 +1,5 @@
 {
-    "name": "BoardControl",
+    "name": "boardcontrol",
     "version": "0.1.0",
     "dependencies": {
         "config": "^3.2.4",

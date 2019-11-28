@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "dependencies": {
         "config": "^3.2.4",
-        "ejs": "^3.0.1",
+        "ejs": "^2.5.5",
         "express": "^4.17.1"
     },
     "author": "lexb2",

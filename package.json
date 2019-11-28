@@ -2,8 +2,8 @@
     "name": "BoardControl",
     "version": "0.1.0",
     "dependencies": {
-        "config": "^1.31.0",
-        "ejs": "^2.7.4",
+        "config": "^3.2.4",
+        "ejs": "^3.0.1",
         "express": "^4.17.1"
     },
     "author": "lexb2",

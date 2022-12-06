@@ -4,7 +4,7 @@
     "dependencies": {
         "config": "^3.2.4",
         "ejs": "^3.0.1",
-        "express": "^4.17.1"
+        "express": "^4.17.3"
     },
     "author": "lexb2",
     "description": "Control and monitor any GNU/Linux system from a Web UI using bash commands to do action or display information."
